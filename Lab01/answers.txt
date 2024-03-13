@@ -1,0 +1,31 @@
+Questions 6.1:
+- What happens if users choose cancel?
+- Answer: When choosing cancel, the application will show the Message that "You choose No". 
+Because condition?"True": "False" can be considered as
+If condition:
+return True;
+else
+return False;
+
+-How to customize option for user:
+- Answer: We can customize option for user by creating an arrays options 
+Object[] options = {"Yes", "No"} or Object[] options = {"I do", "I don't"}.
+And we can instead 
+int option = JOptionPane.showConfirmDialog(Component parentComponent, Object message) by
+int option = JOptionPane.showOptionDialog(Component parentComponent,
+                                   Object message,
+                                   String title,
+                                   int optionType,
+                                   int messageType,
+                                   Icon icon,
+                                   Object[] options,
+                                   Object initialValue);
+
+With int optionType = JOptionPane.YES_NO_OPTION.
+
+
+
+
+
+
+
