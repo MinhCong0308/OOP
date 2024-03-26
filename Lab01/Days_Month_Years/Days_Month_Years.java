@@ -29,7 +29,7 @@ public class Days_Month_Years {
         String month = scanner.nextLine();
         System.out.print("Please enter the year: ");
         int year = scanner.nextInt();
-        if (month.equals("2") && LeapYear(year))
+        if (checkValid(month) == 1 && LeapYear(year))
             System.out.println("The month " + month + " year " + year + " has " + "29 days");
         else {
             int res = checkValid(month);
