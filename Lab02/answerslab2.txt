@@ -1,1 +1,0 @@
-The Java System does not allow to create the constructor that create object by category after creating the constructor method that helps to create objects through the title because both of them are constructor that support to create object through the String type. So it makes conflict.
