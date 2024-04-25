@@ -1,4 +1,4 @@
-package Lab02.AimsProject.src.Aims;
+package Aims;
 
 public class Aims {
 
@@ -12,7 +12,7 @@ public class Aims {
 		anOrder.addDigitalVideoDisc(dvd3);
 		System.out.println("Total cost is: ");
 		System.out.println(anOrder.totalCost());
-		anOrder.removeDigitalVideoDisc(dvd1); //Test for the remove code method.
+		anOrder.removeDigitalVideoDisc(dvd3); //Test for the remove code method.
 		System.out.println("Total cost is: ");
 		System.out.println(anOrder.totalCost());
 		
