@@ -16,3 +16,32 @@ passing object is not an instance of Media, what happens?
 Answer:
 Should the object given not be a Media instance, the equals() method will return false. Because Book, CompactDisc, and DigitalVideoDisc are subclasses of Media, the objects book, cd, and dvd are also considered as Media instances. 
 A ClassCastException could occur during runtime if this is not properly handled, which could potentially lead to your program crashing.
+
+
+16. Reading assignment
+- What are the advantages of Polymorphism?
+- How is Inheritance useful to achieve Polymorphism in Java?
+- What are the differences between Polymorphism and Inheritance in Java?
+
+Answer:
+- The benefits of Polymorphism include:
+    + Code Reuse: Polymorphism allows for the same method name to be used across different classes, promoting code reuse.
+    + Adaptability: It enables an object's behavior to change at runtime based on its usage context, providing flexibility.
+    + Simplified Code: By using the same method name for similar functions, it reduces code complexity and enhances readability and maintainability.
+    + Streamlined Coding: Polymorphism reduces the number of required methods and constructors, simplifying the coding process.
+    + Expandable Code: It allows for code extensibility as new subclasses can be created to extend the superclass's functionality without altering existing code.
+    + Enhanced Efficiency: Compile-time polymorphism can improve coding efficiency as the compiler can determine the appropriate method to call at compile time based on types and passed arguments.
+
+- Inheritance allows us to inherit attributes and methods from another class. Polymorphism then uses these methods to perform various tasks.
+
+- The distinctions between Inheritance and Polymorphism in Java are:
++ Inheritance:
+    - Inheritance involves creating a new class (derived class) that inherits features from an existing class (Base class).
+    - It supports the concept of reusability and reduces code length in object-oriented programming.
+    - It includes single, hybrid, multiple, hierarchical, and multilevel inheritance.
+    - It is utilized in pattern design.
++ Polymorphism:
+    - Polymorphism can be defined in multiple forms.
+    - It is typically applied to functions or methods.
+    - It allows the object to decide which form of the function to implement at compile-time (overloading) and run-time (overriding).
+    - It can be both compile-time polymorphism (overload) and run-time polymorphism (overriding).

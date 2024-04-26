@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 
 public class NoGarbage {
 	public static void main(String[] args) {
-		String filename = "test";
+		String filename = "test.txt";
 		byte[] inputBytes = {0};
 		long startTime, endTime;
 		try {
