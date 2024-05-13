@@ -7,6 +7,7 @@ public class GarbageCreator {
 
 	public static void main(String[] args) {
 		String filename = "test.txt";
+		System.out.println("dm");
 		byte[] inputBytes = {0};
 		long startTime, endTime;
 		try {
@@ -14,6 +15,8 @@ public class GarbageCreator {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		System.out.println("dm");
+
 		startTime = System.currentTimeMillis();
 		String outputString = "";
 		for(byte b : inputBytes) {
