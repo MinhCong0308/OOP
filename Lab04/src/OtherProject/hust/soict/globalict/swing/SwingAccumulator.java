@@ -1,4 +1,4 @@
-package hust.soict.globalict.swing;
+package OtherProject.hust.soict.globalict.swing;
 import java.awt.Container;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -7,7 +7,7 @@ import javax.swing.*;
 
 
 public class SwingAccumulator extends JFrame implements ActionListener{
-	private static final long serialVersionUID = 1L;
+	//private static final long serialVersionUID = 1L;
 	private JTextField tfInput;
 	private JTextField tfOutput;
 	private int sum = 0;

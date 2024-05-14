@@ -1,4 +1,5 @@
-package hust.soict.globalict.swing;
+package OtherProject.hust.soict.globalict.swing;
+
 import java.awt.*;
 import java.awt.GridLayout;
 import java.awt.event.*;
@@ -21,7 +22,7 @@ public class NumberGrid extends JFrame{
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setTitle("Number Grid");
-		setSize(200,200);
+		setSize(300,300);
 		setVisible(true);
 		
 	}

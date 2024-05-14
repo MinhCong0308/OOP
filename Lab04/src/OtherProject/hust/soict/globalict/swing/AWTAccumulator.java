@@ -1,8 +1,8 @@
-package hust.soict.globalict.swing;
+package OtherProject.hust.soict.globalict.swing;
 import java.awt.*;
 import java.awt.event.*;
 public class AWTAccumulator extends Frame implements ActionListener{
-	private static final long serialVersionUID = 1L;
+	//private static final long serialVersionUID = 1L;
 	private TextField tfInput;
 	private TextField tfOutput;
 	private int sum = 0;
