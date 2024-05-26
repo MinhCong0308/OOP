@@ -1,4 +1,4 @@
-package OtherProject.hust.soict.globalict.swing;
+package GUIProject.hust.soict.globalict.swing;
 import java.awt.*;
 import java.awt.event.*;
 public class AWTAccumulator extends Frame implements ActionListener{
