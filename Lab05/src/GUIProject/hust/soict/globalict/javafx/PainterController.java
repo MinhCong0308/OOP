@@ -15,10 +15,10 @@ public class PainterController {
     private Pane drawingAreaPane;
 
     @FXML
-    private RadioButton pen;
+    private RadioButton Pen;
 
     @FXML
-    private RadioButton eraser;
+    private RadioButton Delete;
 
     @FXML
     private ToggleGroup drawTools;
@@ -33,9 +33,9 @@ public class PainterController {
     void drawingAreaMouseDragged(MouseEvent event) {
         Rectangle clipArea = new Rectangle(0, 0, drawingAreaPane.getWidth(), drawingAreaPane.getHeight());
         drawingAreaPane.setClip(clipArea);
-        if (pen.isSelected() || eraser.isSelected()) {
+        if (Pen.isSelected() || Delete.isSelected()) {
             Color inkColor;
-            if (pen.isSelected()) {
+            if (Pen.isSelected()) {
                 inkColor = Color.BLACK;
             } else {
                 inkColor = Color.WHITE;
