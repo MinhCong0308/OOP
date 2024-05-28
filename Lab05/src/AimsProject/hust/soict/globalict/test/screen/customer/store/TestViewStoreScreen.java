@@ -3,6 +3,7 @@ package AimsProject.hust.soict.globalict.test.screen.customer.store;
 import java.util.ArrayList;
 import java.util.List;
 
+import AimsProject.hust.soict.globalict.aims.cart.Cart;
 import AimsProject.hust.soict.globalict.aims.media.Book;
 import AimsProject.hust.soict.globalict.aims.media.DigitalVideoDisc;
 import AimsProject.hust.soict.globalict.aims.screen.customer.controller.ViewStoreController;
@@ -15,11 +16,11 @@ import javafx.stage.Stage;
 
 public class TestViewStoreScreen extends Application {
     private static Store store = new Store(); // Initialize the store
-
+    private Cart cart = new Cart();
     public void start(Stage primaryStage) throws Exception {
         final String STORE_FXML_FILE_PATH = "/AimsProject/hust/soict/globalict/aims/screen/customer/view/Store.fxml";
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(STORE_FXML_FILE_PATH));
-        ViewStoreController viewStoreController = new ViewStoreController(store);
+        ViewStoreController viewStoreController = new ViewStoreController(store, cart);
         fxmlLoader.setController(viewStoreController);
         Parent root = fxmlLoader.load();
         
@@ -27,7 +28,6 @@ public class TestViewStoreScreen extends Application {
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
-
     public static void addToStore(Store store) { // Testing Function
         DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95f);
         store.addItem(dvd1);

@@ -1,6 +1,7 @@
 package AimsProject.hust.soict.globalict.aims.media;
 
-public interface Playable {
-	public void play();
+import AimsProject.hust.soict.globalict.aims.exception.PlayerException;
 
+public interface Playable {
+    public StringBuffer play() throws PlayerException;
 }
