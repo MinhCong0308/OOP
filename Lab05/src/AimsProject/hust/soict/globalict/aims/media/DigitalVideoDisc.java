@@ -1,5 +1,6 @@
 package AimsProject.hust.soict.globalict.aims.media;
 
+import AimsProject.hust.soict.globalict.aims.exception.PlayerException;
 
 public class DigitalVideoDisc extends Disc implements Playable{
 	//Create the constructor
@@ -27,9 +28,15 @@ public class DigitalVideoDisc extends Disc implements Playable{
         return "DVD" + " - " + this.getTitle() + " - " + this.getCategory() + " - " + this.getDirector() 
         		+ " - " + this.getLength() + " - " + this.getCost() + "$";
     }
-	public void play() {
+	public StringBuffer play() throws PlayerException{
 		System.out.println("Playing DVD: " + this.getTitle());
 		System.out.println("DVD Length: " + this.getLength());
+		if(this.getLength() > 0) {
+			StringBuffer info = new StringBuffer("");
+			info.append("Playing DVD: " + this.getTitle() + "\n" + "DVD length: " + this.getLength());
+			return info;
+		}
+		else throw new PlayerException("ERROR! This DVD is non-possitive !");
 	}
 }
 	

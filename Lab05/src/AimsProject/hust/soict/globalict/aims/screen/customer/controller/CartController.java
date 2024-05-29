@@ -2,6 +2,7 @@ package AimsProject.hust.soict.globalict.aims.screen.customer.controller;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,9 +15,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -55,6 +55,13 @@ public class CartController {
 
     @FXML
     private Button btnRemove;
+    
+
+    @FXML
+    private RadioButton radioBtnFilterTitle;
+
+    @FXML
+    private TextField tfFilter;
 
     @FXML
     private TableColumn<Media, String> colMediaTitle;
@@ -118,11 +125,19 @@ public class CartController {
         	tblMedia.setItems(cart.getItemsOrdered());
         }
         btnPlay.setVisible(false);
-        btnRemove.setVisible(false); // If the tblMedia is not empty then this 2 buttons visible
+        btnRemove.setVisible(false); // The button only be visible when we press to 1 products on cart
         tblMedia.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Media>() {
         	public void changed(ObservableValue<? extends Media> observable, Media oldValue, Media newValue) {
         		updateButtonBar(newValue);
         	}
+        });
+        
+        //add listener to tfFilter, it help the showFilter update following to our enter.
+        tfFilter.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                showFilteredMedia(newValue);
+            }
         });
         costLabel.setText(cart.totalCost() + " $");
         
@@ -142,5 +157,15 @@ public class CartController {
     		}
     	}
     }
+    void showFilteredMedia(String filter) {
+    	if(radioBtnFilterTitle.isSelected()) {
+    		FilteredList<Media> filteredList = new FilteredList<>(cart.getItemsOrdered(), null);
+    		filteredList.setPredicate(media -> media.filterProperty(filter));
+    		if (cart.getItemsOrdered() != null) {
+    			tblMedia.setItems(filteredList);
+    		}
+    	}
+    }
+
 
 }

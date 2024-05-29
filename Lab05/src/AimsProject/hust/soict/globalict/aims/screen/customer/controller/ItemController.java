@@ -51,10 +51,10 @@ public class ItemController {
 		try {
 			Alert alert = new Alert(Alert.AlertType.INFORMATION,((Playable) media).play().toString());
 	        alert.showAndWait();
-	        } catch (PlayerException e) {
-	        	Alert alert = new Alert(Alert.AlertType.ERROR, e.getMessage());
-	            alert.showAndWait();
-	        }
+	    } catch (PlayerException e) {
+	    	Alert alert = new Alert(Alert.AlertType.ERROR, e.getMessage());
+	        alert.showAndWait();
+	    }
 	}
 	public void setData(Media media) {
 		this.media = media;
