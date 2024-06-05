@@ -36,9 +36,8 @@ public class ItemController {
 
 	@FXML
 	void btnAddtoCartClicked(ActionEvent event) {
-		int numAdded = 0;
 	    try {
-	    	numAdded = cart.addMedia(media);
+	    	int numAdded = cart.addMedia(media);
 	    	} catch (LimitExceededException e) {
 	    		Alert alert = new Alert(Alert.AlertType.ERROR, e.getMessage());
 	            alert.showAndWait();

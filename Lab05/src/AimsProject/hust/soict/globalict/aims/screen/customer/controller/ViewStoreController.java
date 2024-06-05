@@ -23,6 +23,7 @@ public class ViewStoreController {
 		this.store = store;
 		this.cart = cart;
 	}
+
 	@FXML
 	private Button viewCart;
 
@@ -55,7 +56,6 @@ public class ViewStoreController {
 				FXMLLoader fxmlLoader = new FXMLLoader();
 				fxmlLoader.setLocation(getClass().getResource(ITEM_FXML_FILE_PATH));
 				ItemController itemController = new ItemController(cart);
-                fxmlLoader.setController(itemController);
                 fxmlLoader.setController(itemController);
                 AnchorPane anchorPane = new AnchorPane();
                 anchorPane = fxmlLoader.load();

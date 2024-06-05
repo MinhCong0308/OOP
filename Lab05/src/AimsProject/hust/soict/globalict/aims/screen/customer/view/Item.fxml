@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane style="-fx-border-color: black;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox alignment="CENTER" prefHeight="175.0" prefWidth="305.0">
          <children>
@@ -15,14 +14,14 @@
             <Label fx:id="lblCost" text="Cost" />
             <HBox alignment="CENTER" prefHeight="50.0" prefWidth="305.0" spacing="20.0">
                <children>
-                  <Button fx:id="btnAddtoCart" mnemonicParsing="false" onAction="#btnAddtoCartClicked" prefHeight="50.0" prefWidth="305.0" text="Add to Cart">
+                  <Button fx:id="btnAddtoCart" mnemonicParsing="false" onAction="#btnAddtoCartClicked" prefHeight="50.0" prefWidth="250.0" text="Add to Cart">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="14.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnPlay" mnemonicParsing="false" onAction="#btnPlayClicked" prefHeight="50.0" prefWidth="305.0" text="Play">
+                  <Button fx:id="btnPlay" mnemonicParsing="false" onAction="#btnPlayClicked" prefHeight="50.0" prefWidth="250.0" text="Play">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="14.0" />
                      </font>
                   </Button>
                </children>
